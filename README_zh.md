@@ -2,9 +2,13 @@
 
 [English](README.md) | [中文](README_zh.md)
 
+<br/>
+
 ## 1. 简介
 
-这个项目是论文*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)* 的实验部分。 该项目主要实现了HCGLA，一种新的抗梯度高压缩的数据重建攻击方法。
+这个项目是论文[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066) 的实验部分。 该项目主要实现了HCGLA，一种新的抗梯度高压缩的数据重建攻击方法。
+
+<br/>
 
 ## 2. 环境配置
 
@@ -13,85 +17,82 @@
 pip install -r requirements.txt
 ```
 
+<br/>
+
 ## 3. 攻击样例
 
 | ![example_batchsize1](readmeimg/example_batchsize1.png)      |   ![example_batchsize4](readmeimg/example_batchsize4.png)    |
 | :----------------------------------------------------------- | :----------------------------------------------------------: |
-| (a) HCGLA (*Init-Generation*)在梯度压缩率为0.1%且被攻击数据batch大小为1的场景下攻击经典数据集的可视化结果。 | (b) Visualization of HCGLA (*Init-Generation*) on  popular facial dataset at a 0.1% compression rate with batchsize=4. |
+| (a) HCGLA (*Init-Generation*)在梯度压缩率为0.1%且被攻击数据batch大小为1的场景下攻击经典数据集的可视化结果。 | (b) HCGLA (*Init-Generation*)在梯度压缩率为0.1%且被攻击数据batch大小为4的场景下攻击人脸数据集CelebA的可视化结果。 |
 
-## 4. How to use
+<br/>
 
-- **Prepare dataset and models we trained:**
+## 4. 使用此项目
 
-You can download the dataset used in our paper by the following table. Then place these datasets in the corresponding locations refering  [ProjectStructure.txt](ProjectStructure.txt).
+### 4.1 准备数据集和我们训练的模型:
+
+通过下表中的链接可以下载我们论文中用到的数据集。然后参照项目结构文件 [ProjectStructure.txt](ProjectStructure.txt) 把数据集放在相应的位置。
 
 | Dataset name |                        Download link                         |
 | :----------: | :----------------------------------------------------------: |
 |    CelebA    | [CelebA Dataset (cuhk.edu.hk)](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) |
 |     LFW      | [LFW Face Database : Main (umass.edu)](http://vis-www.cs.umass.edu/lfw/) |
-|   Pubface    | link：https://pan.baidu.com/s/1UYBx_Wd37ngo8iwfKoranQ , password：ahlb |
-| GoogleImage  | link：https://pan.baidu.com/s/157bfS8JkquwIgjop0GgHEQ , password：eia1 |
+|   Pubface    | 链接：https://pan.baidu.com/s/1UYBx_Wd37ngo8iwfKoranQ , 密码：ahlb |
+| GoogleImage  | 链接：https://pan.baidu.com/s/157bfS8JkquwIgjop0GgHEQ , 密码：eia1 |
 |   CIFAR10    | [CIFAR-10 and CIFAR-100 datasets (toronto.edu)](http://www.cs.toronto.edu/~kriz/cifar.html) |
 |   CIFAR100   | [CIFAR-10 and CIFAR-100 datasets (toronto.edu)](http://www.cs.toronto.edu/~kriz/cifar.html) |
 |   ImageNet   |      [ImageNet (image-net.org)](https://image-net.org/)      |
-|    MNIST     | link：https://pan.baidu.com/s/1YinvpHh1wxfN-LxRJ5bLOA , password：j4ew |
-|    FMNIST    | link：https://pan.baidu.com/s/18itHnRISvdJE1SL2gbto8g , password：2nlz |
-You can download the models we trained in our experiments by the following table. Then place these models in the corresponding locations refering [ProjectStructure.txt](ProjectStructure.txt).
+|    MNIST     | 链接：https://pan.baidu.com/s/1YinvpHh1wxfN-LxRJ5bLOA , 密码：j4ew |
+|    FMNIST    | 链接：https://pan.baidu.com/s/18itHnRISvdJE1SL2gbto8g , 密码：2nlz |
+
+通过下表中的链接可以下载我们训练好的模型，您也可以通过4.2、4.3、4.4的步骤用自己的数据集训练模型。然后参照项目结构文件 [ProjectStructure.txt](ProjectStructure.txt) 把模型放在相应的位置。
 
 |   Model name    |                        Download link                         |
 | :-------------: | :----------------------------------------------------------: |
-| Denoising model | link：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg , password：vrbs |
-| generator model | link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e |
+| Denoising model | 链接：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg , 密码：vrbs |
+| Generator model | 链接：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , 密码：2p5e |
 
-- **Train denoising model:**
+### 4.2 训练去噪模型:
 
-You need to demonstrate the data reconstruction attack enough times to collect enough noisy images from the reconstruction process and then train a denoising model with the original images and these collected noisy images.
-Step 1: To connect enough noising images by running:
+你需要重复足够次数的数据重建攻击，以便从重建过程中收集足够多的噪声图像，然后用原始图像和这些收集的噪声图像训练去噪模型。
 
-```cmd
+步骤 1，请运行以下命令以收集足够多数据重建攻击过程中产生的图像:
+
+```shell
 python ConnectNoisyimg.py
 ```
 
-Step 2: To train denoising model by running:
+步骤 2，请运行以下命令训练适用于数据重建攻击的去噪模型:
 
-```cmd
+```shell
 python Train_DnCNN.py
 ```
 
-Step 3: To test denoising model by running:
+步骤 3，请运行以下命令测试上一步训练得到去噪模型:
 
-```cmd
+```shell
 python Test_DnCNN.py
 ```
 
-Then you can see the trained model under the `./models/DenoisingModel/DnCNN` folder.  You can also download the denoising model we trained by the link：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg and its password：vrbs.
+然后你可以在`./models/DenoisingModel/DnCNN`文件夹下看到训练好的模型。 你也可以通过以下链接下载我们训练的去噪模型：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg，其密码为：vrbs。
 
-- **Train and test generator in *Init-Generation*:**
+### 4.3 训练生成初始化中的生成器:
 
-When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m) file. When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`. You can download the generators by the link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e. Due to the limited computing power of the lab equipment, we did not train the multi-batch, ResNet generator, but you can also train the ResNet, multi-batch attack scenario generator by yourself if you need.
+当batchsize=1时，你可以通过参考[Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m)文件来训练和测试一个生成器。当batchsize！=1时，你可以通过运行`python Train_batchsize_generator.py`来训练一个生成器，然后你可以通过运行`python Test_batchsize_generator.py`来测试一个生成器。你可以通过以下链接下载生成器：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA ，密码：2p5e。由于实验室设备的计算能力有限，我们没有训练多批次、ResNet生成器，但如果你需要，你也可以自己训练ResNet、多批次攻击场景生成器。
 
-- **Train HCGLA and Recover data:**
+### 4.4 发起HCGLA重建数据:
 
-After prepare all the datasets and models you can launch HCGLA.
-If you want to launch HCGLA with batchsize = 1, run:
+在准备好所有的数据集和模型之后，你可以发起HCGLA。如果你想在 batchsize = 1的情况下发起HCGLA，请运行： `python Reconstruct_batchsize1.py`。如果你想攻击在batchsize !=1的情况下发起HCGLA，运行： `Reconstruct_minibatch.py`。
 
-```
-python Reconstruct_batchsize1.py
-```
+### 4.5 注意:
 
-batchsize != 1, run:
+`你可以修改参数设置以适应你的需要`
 
-```
-Reconstruct_minibatch.py
-```
+<br/>
 
-- **Notes:**
+## 5. 引用
 
-`You can modify the parameter settings to suit your needs`
-
-## 5. Citation
-
-If you find our work useful in your research, please consider citing:
+如果你觉得我们的工作对你的研究有用，请考虑引用:
 
 ```latex
 @ARTICLE{10003066,
@@ -105,6 +106,8 @@ If you find our work useful in your research, please consider citing:
   doi={10.1109/TIFS.2022.3227761}}
 ```
 
-## 6. Contact
+<br/>
 
-If you have any questions, please contact me via email kunlan_xiang@163.com
+## 6. 联系
+
+如果你有任何问题，请通过电子邮件与我联系 kunlan_xiang@163.com
