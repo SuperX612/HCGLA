@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README_zh.md)
 
-
+<br/>
 
 ## 1. Introduction
 
@@ -81,20 +81,9 @@ Then you can see the trained model under the `./models/DenoisingModel/DnCNN` fol
 
 When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m) file. When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`. You can download the generators by the link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e. Due to the limited computing power of the lab equipment, we did not train the multi-batch, ResNet generator, but you can also train the ResNet, multi-batch attack scenario generator by yourself if you need.
 
-### 4.4 Train HCGLA and Recover data:
+### 4.4 Launch HCGLA and Recover data:
 
-After prepare all the datasets and models you can launch HCGLA.
-If you want to launch HCGLA with batchsize = 1, run:
-
-```shell
-python Reconstruct_batchsize1.py
-```
-
-batchsize != 1, run:
-
-```shell
-Reconstruct_minibatch.py
-```
+After prepare all the datasets and models you can launch HCGLA. If you want to launch HCGLA with batchsize = 1, run: `python Reconstruct_batchsize1.py`. If batchsize != 1, run: `Reconstruct_minibatch.py`
 
 ### 4.5 Notes:
 
