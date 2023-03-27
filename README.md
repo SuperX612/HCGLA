@@ -94,7 +94,7 @@ Reconstruct_minibatch.py
 
 - **Notes:**
 
-==You can modify the parameter settings to suit your needs==
+`You can modify the parameter settings to suit your needs`
 
 ## 5. Citation
 
