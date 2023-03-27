@@ -9,7 +9,6 @@
 ## 2. 环境配置
 
 请运行以下命令以安装复现该项目所需要的库:
-
 ```
 pip install -r requirements.txt
 ```
@@ -37,7 +36,6 @@ You can download the dataset used in our paper by the following table. Then plac
 |   ImageNet   |      [ImageNet (image-net.org)](https://image-net.org/)      |
 |    MNIST     | link：https://pan.baidu.com/s/1YinvpHh1wxfN-LxRJ5bLOA , password：j4ew |
 |    FMNIST    | link：https://pan.baidu.com/s/18itHnRISvdJE1SL2gbto8g , password：2nlz |
-
 You can download the models we trained in our experiments by the following table. Then place these models in the corresponding locations refering [ProjectStructure.txt](ProjectStructure.txt).
 
 |   Model name    |                        Download link                         |
