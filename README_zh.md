@@ -4,7 +4,7 @@
 
 ## 1. 简介
 
-这个项目是论文*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*的实验部分。 该项目主要实现了HCGLA，一种新的抗梯度高压缩的数据重建攻击方法。
+这个项目是论文*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)* 的实验部分。 该项目主要实现了HCGLA，一种新的抗梯度高压缩的数据重建攻击方法。
 
 ## 2. 环境配置
 
