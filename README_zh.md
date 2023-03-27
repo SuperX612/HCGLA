@@ -110,4 +110,4 @@ python Test_DnCNN.py
 
 ## 6. 联系
 
-如果你有任何问题，请通过电子邮件与我联系 kunlan_xiang@163.com
+如果你有任何问题，请通过电子邮件与我联系 kunlan_xiang@163.com。
