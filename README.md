@@ -2,17 +2,27 @@
 
 [English](README.md) | [中文](README_zh.md)
 
+
+
 ## 1. Introduction
 
 This is an official implementation of our paper:*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*. We present a novel data leakage attack algorithm against highly compressed gradients.
+
+
+
+
 
 ## 2. Requirements
 
 To install the requirements, run:
 
-```
+```shell
 pip install -r requirements.txt
 ```
+
+
+
+
 
 ## 3. Examples
 
@@ -20,8 +30,13 @@ pip install -r requirements.txt
 | :----------------------------------------------------------- | :----------------------------------------------------------: |
 | (a) Visualization of HCGLA (*Init-Generation*) on  popular datasets at a 0.1% compression rate with batchsize=1. | (b) Visualization of HCGLA (*Init-Generation*) on  popular facial dataset at a 0.1% compression rate with batchsize=4. |
 
+
+
+
+
 ## 4. How to use
-- **Prepare dataset and models we trained:**
+
+### 4.1 Prepare dataset and models we trained:
 
 You can download the dataset used in our paper by the following table. Then place these datasets in the corresponding locations refering  [ProjectStructure.txt](ProjectStructure.txt).
 
@@ -44,51 +59,56 @@ You can download the models we trained in our experiments by the following table
 | Denoising model | link：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg , password：vrbs |
 | generator model | link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e |
 
-- **Train denoising model:**
+### 4.2 Train denoising model:
 
 You need to demonstrate the data reconstruction attack enough times to collect enough noisy images from the reconstruction process and then train a denoising model with the original images and these collected noisy images.
+
 Step 1: To connect enough noising images by running:
 
-```cmd
+```shell
 python ConnectNoisyimg.py
 ```
 
 Step 2: To train denoising model by running:
 
-```cmd
+```shell
 python Train_DnCNN.py
 ```
 
 Step 3: To test denoising model by running:
 
-```cmd
+```shell
 python Test_DnCNN.py
 ```
 
 Then you can see the trained model under the `./models/DenoisingModel/DnCNN` folder.  You can also download the denoising model we trained by the link：https://pan.baidu.com/s/1EhFDwx8Z4Y3pLySPTz1iLg and its password：vrbs.
 
-- **Train and test generator in *Init-Generation*:**
+### 4.3 Train and test generator in *Init-Generation*:
 
 When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m) file. When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`. You can download the generators by the link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e. Due to the limited computing power of the lab equipment, we did not train the multi-batch, ResNet generator, but you can also train the ResNet, multi-batch attack scenario generator by yourself if you need.
 
-- **Train HCGLA and Recover data:**
+### 4.4 Train HCGLA and Recover data:
 
 After prepare all the datasets and models you can launch HCGLA.
 If you want to launch HCGLA with batchsize = 1, run:
 
-```
+```shell
 python Reconstruct_batchsize1.py
 ```
 
 batchsize != 1, run:
 
-```
+```shell
 Reconstruct_minibatch.py
 ```
 
-- **Notes:**
+### 4.5 Notes:
 
 `You can modify the parameter settings to suit your needs`
+
+
+
+
 
 ## 5. Citation
 
@@ -105,6 +125,10 @@ If you find our work useful in your research, please consider citing:
   pages={818-830},
   doi={10.1109/TIFS.2022.3227761}}
 ```
+
+
+
+
 
 ## 6. Contact
 
