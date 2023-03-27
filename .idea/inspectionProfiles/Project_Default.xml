@@ -1,0 +1,22 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="9">
+            <item index="0" class="java.lang.String" itemvalue="bcoding" />
+            <item index="1" class="java.lang.String" itemvalue="ipaddress" />
+            <item index="2" class="java.lang.String" itemvalue="bitstring" />
+            <item index="3" class="java.lang.String" itemvalue="PyPubSub" />
+            <item index="4" class="java.lang.String" itemvalue="pubsub" />
+            <item index="5" class="java.lang.String" itemvalue="nevergrad" />
+            <item index="6" class="java.lang.String" itemvalue="matplotlit" />
+            <item index="7" class="java.lang.String" itemvalue="pytorch_pretrained_biggan" />
+            <item index="8" class="java.lang.String" itemvalue="gpytorch" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
