@@ -82,7 +82,7 @@ python Test_DnCNN.py
 
 ### 4.4 发起HCGLA重建数据:
 
-在准备好所有的数据集和模型之后，你可以发起HCGLA。如果你想在 batchsize = 1的情况下发起HCGLA，请运行： `python Reconstruct_batchsize1.py`。如果你想攻击在batchsize !=1的情况下发起HCGLA，运行： `Reconstruct_minibatch.py`。
+在准备好所有的数据集和模型之后，你可以发起HCGLA。如果你想在 batchsize = 1的情况下发起HCGLA，请运行： `python Reconstruct_batchsize1.py`。如果你想攻击在batchsize !=1的情况下发起HCGLA，运行： `python Reconstruct_minibatch.py`。
 
 ### 4.5 注意:
 
