@@ -7,7 +7,7 @@
 - We present a novel data leakage attack algorithm against highly compressed gradients.
 ## 2. Requirements
 
-To install the requirements, running:
+To install the requirements, run:
 
 ```
 pip install -r requirements.txt
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ## 4. How to use
 - **Prepare dataset and models we trained:**
 
-You can download the dataset used in our paper by the following table. Then place these datasets in the corresponding locations in  [ProjectStructure.txt](ProjectStructure.txt).
+You can download the dataset used in our paper by the following table. Then place these datasets in the corresponding locations refering  [ProjectStructure.txt](ProjectStructure.txt).
 
 | Dataset name |                        Download link                         |
 | :----------: | :----------------------------------------------------------: |
@@ -36,7 +36,7 @@ You can download the dataset used in our paper by the following table. Then plac
 |    MNIST     | link：https://pan.baidu.com/s/1YinvpHh1wxfN-LxRJ5bLOA , password：j4ew |
 |    FMNIST    | link：https://pan.baidu.com/s/18itHnRISvdJE1SL2gbto8g , password：2nlz |
 
-You can download the models we trained in our experiments by the following table. Then place these datasets in the corresponding locations in  [ProjectStructure.txt](ProjectStructure.txt).
+You can download the models we trained in our experiments by the following table. Then place these models in the corresponding locations refering [ProjectStructure.txt](ProjectStructure.txt).
 
 |   Model name    |                        Download link                         |
 | :-------------: | :----------------------------------------------------------: |
@@ -79,7 +79,9 @@ Due to the limited computing power of the lab equipment, we did not train the mu
 
 - **Train HCGLA and Recover data:**
 
-If you want to evaluate our method with batchsize = 1, run:
+After prepare all the datasets and models you can launch HCGLA.
+
+If you want to launch HCGLA with batchsize = 1, run:
 
 ```
 python Reconstruct_batchsize1.py
