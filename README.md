@@ -8,9 +8,7 @@
 
 This is an official implementation of our paper:*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*. We present a novel data leakage attack algorithm against highly compressed gradients.
 
-
-
-
+<br/>
 
 ## 2. Requirements
 
@@ -20,9 +18,7 @@ To install the requirements, run:
 pip install -r requirements.txt
 ```
 
-
-
-
+<br/>
 
 ## 3. Examples
 
@@ -30,9 +26,7 @@ pip install -r requirements.txt
 | :----------------------------------------------------------- | :----------------------------------------------------------: |
 | (a) Visualization of HCGLA (*Init-Generation*) on  popular datasets at a 0.1% compression rate with batchsize=1. | (b) Visualization of HCGLA (*Init-Generation*) on  popular facial dataset at a 0.1% compression rate with batchsize=4. |
 
-
-
-
+<br/>
 
 ## 4. How to use
 
@@ -106,9 +100,7 @@ Reconstruct_minibatch.py
 
 `You can modify the parameter settings to suit your needs`
 
-
-
-
+<br/>
 
 ## 5. Citation
 
@@ -126,9 +118,7 @@ If you find our work useful in your research, please consider citing:
   doi={10.1109/TIFS.2022.3227761}}
 ```
 
-
-
-
+<br/>
 
 ## 6. Contact
 
