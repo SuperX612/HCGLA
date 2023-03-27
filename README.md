@@ -7,15 +7,10 @@
 - We present a novel data leakage attack algorithm against highly compressed gradients.
 ## 2. Requirements
 
-- If your device is `GPU` please running:
+To install the requirements, running:
 
 ```
-pip install -r requirements_GPU.txt
-```
-- If your device is `CPU` please running:
-
-```
-pip install -r requirements_CPU.txt
+pip install -r requirements.txt
 ```
 
 ## 3. Examples
