@@ -83,7 +83,7 @@ When batchsize=1, You can train and test a generator by referring to the  [Gradi
 
 ### 4.4 Launch HCGLA and Recover data:
 
-After prepare all the datasets and models you can launch HCGLA. If you want to launch HCGLA with batchsize = 1, run: `python Reconstruct_batchsize1.py`. If batchsize != 1, run: `Reconstruct_minibatch.py`
+After prepare all the datasets and models you can launch HCGLA. If you want to launch HCGLA with batchsize = 1, run: `python Reconstruct_batchsize1.py`. If batchsize != 1, run: `python Reconstruct_minibatch.py`
 
 ### 4.5 Notes:
 
