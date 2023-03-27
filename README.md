@@ -68,7 +68,7 @@ Then you can see the trained model under the `./models/DenoisingModel/DnCNN` fol
 
 - **Train and test generator in *Init-Generation*:**
 
-When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](Gradinv.html)  file.
+When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m) file.
 
 When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`.
 
