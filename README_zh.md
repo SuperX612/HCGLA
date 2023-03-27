@@ -1,26 +1,27 @@
 # HCGLA
 
-[English](README.md) | [中文]()(README_zh.md)
+[English](README.md) | [中文](README_zh.md)
 
-## 1. Introduction
+## 1. 简介
 
-This is an official implementation of our paper:*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*. We present a novel data leakage attack algorithm against highly compressed gradients.
+这个项目是论文*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*的实验部分。 该项目主要实现了HCGLA，一种新的抗梯度高压缩的数据重建攻击方法。
 
-## 2. Requirements
+## 2. 环境配置
 
-To install the requirements, run:
+请运行以下命令以安装复现该项目所需要的库:
 
 ```
 pip install -r requirements.txt
 ```
 
-## 3. Examples
+## 3. 攻击样例
 
 | ![example_batchsize1](readmeimg/example_batchsize1.png)      |   ![example_batchsize4](readmeimg/example_batchsize4.png)    |
 | :----------------------------------------------------------- | :----------------------------------------------------------: |
-| (a) Visualization of HCGLA (*Init-Generation*) on  popular datasets at a 0.1% compression rate with batchsize=1. | (b) Visualization of HCGLA (*Init-Generation*) on  popular facial dataset at a 0.1% compression rate with batchsize=4. |
+| (a) HCGLA (*Init-Generation*)在梯度压缩率为0.1%且被攻击数据batch大小为1的场景下攻击经典数据集的可视化结果。 | (b) Visualization of HCGLA (*Init-Generation*) on  popular facial dataset at a 0.1% compression rate with batchsize=4. |
 
 ## 4. How to use
+
 - **Prepare dataset and models we trained:**
 
 You can download the dataset used in our paper by the following table. Then place these datasets in the corresponding locations refering  [ProjectStructure.txt](ProjectStructure.txt).
