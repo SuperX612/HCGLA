@@ -56,6 +56,7 @@ You can download the models we trained in our experiments by the following table
 ### 4.2 Train denoising model:
 
 You need to demonstrate the data reconstruction attack enough times to collect enough noisy images from the reconstruction process and then train a denoising model with the original images and these collected noisy images.
+
 Step 1: To connect enough noising images by running:
 
 ```shell
