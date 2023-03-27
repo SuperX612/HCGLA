@@ -57,10 +57,7 @@ def show(modelpath, seed=100):
 
 
 if __name__ == "__main__":
-    # model_path = "./models/generators/gi_lenet_epoch500_2000img(formal_class_20).pkl"
     model_path = "./models/generators/generator_batchsize4.pkl"
-    # model_path = "../models/batch16Generator/generator_lr0.001_epoch56_globalLoss6377.71609.pkl"
-    # model_path = "/home/b1107/user/xkl/HLA/models/com0.001batchsize16/generator_lr0.01_epoch50_globalLoss6645.24755.pkl"
     batchsize = 4
     compress_rate = 0.001
     if torch.cuda.is_available():

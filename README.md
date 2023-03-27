@@ -2,9 +2,8 @@
 
 ## 1. Introduction
 
-- This is an official implementation of the following paper:*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*.
+This is an official implementation of the following paper:*[Using Highly Compressed Gradients in Federated Learning for Data Reconstruction Attacks](https://ieeexplore.ieee.org/document/10003066)*. We present a novel data leakage attack algorithm against highly compressed gradients.
 
-- We present a novel data leakage attack algorithm against highly compressed gradients.
 ## 2. Requirements
 
 To install the requirements, run:
