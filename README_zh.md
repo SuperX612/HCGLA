@@ -78,7 +78,7 @@ python Test_DnCNN.py
 
 ### 4.3 训练生成初始化中的生成器:
 
-当batchsize=1时，你可以通过参考[Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m)文件来训练和测试一个生成器。当batchsize！=1时，你可以通过运行`python Train_batchsize_generator.py`来训练一个生成器，然后你可以通过运行`python Test_batchsize_generator.py`来测试一个生成器。你可以通过以下链接下载生成器：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA ，密码：2p5e。由于实验室设备的计算能力有限，我们没有训练多批次、ResNet生成器，但如果你需要，你也可以自己训练ResNet、多批次攻击场景生成器。
+当batchsize=1时，你可以通过参考[Gradinv.html](https://superx612.github.io/2023/03/28/Gradinv/)文件来训练和测试一个生成器。当batchsize！=1时，你可以通过运行`python Train_batchsize_generator.py`来训练一个生成器，然后你可以通过运行`python Test_batchsize_generator.py`来测试一个生成器。你可以通过以下链接下载生成器：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA ，密码：2p5e。由于实验室设备的计算能力有限，我们没有训练多批次、ResNet生成器，但如果你需要，你也可以自己训练ResNet、多批次攻击场景生成器。
 
 ### 4.4 发起HCGLA重建数据:
 

@@ -79,7 +79,7 @@ Then you can see the trained model under the `./models/DenoisingModel/DnCNN` fol
 
 ### 4.3 Train and test generator in *Init-Generation*:
 
-When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://pan.baidu.com/s/1p1qzDWuVk_Emvt26Ru_erQ?pwd=k89m) file. When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`. You can download the generators by the link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e. Due to the limited computing power of the lab equipment, we did not train the multi-batch, ResNet generator, but you can also train the ResNet, multi-batch attack scenario generator by yourself if you need.
+When batchsize=1, You can train and test a generator by referring to the  [Gradinv.html](https://superx612.github.io/2023/03/28/Gradinv/) file. When batchsize!=1, you can train a generator by running `python Train_batchsize_generator.py`, Then you can test a generator by running `python Test_batchsize_generator.py`. You can download the generators by the link：https://pan.baidu.com/s/1ffmEis1uffoYB69BN_k2pA , password：2p5e. Due to the limited computing power of the lab equipment, we did not train the multi-batch, ResNet generator, but you can also train the ResNet, multi-batch attack scenario generator by yourself if you need.
 
 ### 4.4 Launch HCGLA and Recover data:
 
